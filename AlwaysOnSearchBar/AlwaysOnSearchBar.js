@@ -5,7 +5,7 @@
 */
 
 tau.mashups
-  .addDependency('libs/jquery/jquery')
+  .addDependency('jQuery')
   .addMashup(function($, config) {
     function alwaysShowSearchBar() {
       return setTimeout(function() {

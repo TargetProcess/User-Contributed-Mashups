@@ -10,6 +10,8 @@ tau.mashups
     function alwaysShowSearchBar() {
       return setTimeout(function() {
         $('.tau-search-close').hide();
+        $('.tau-main-search').css('visibility', 'visible');
+        $('.tau-main-search').css('opacity', 'initial');
         $('.tau-main-menu').css('margin-right', '300px');
         $('.tau-menu-item-search').addClass('tau-menu-item-search-open').css({
           'position': 'absolute', 'margin-left': '380px'

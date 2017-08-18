@@ -6,6 +6,7 @@ Once you install the mashup, it will automatically activate whenever you open Ta
 
 To disable auto-apply, comment the last line in the mashup script ```initColorfulTheme();```.
 
+![Colorful Theme for TargetProcess](Colorful_screenshot1.png)
 
 ### How to use
 1. Install the mashup

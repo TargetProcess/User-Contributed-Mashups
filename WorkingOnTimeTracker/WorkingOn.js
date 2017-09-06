@@ -363,5 +363,9 @@ tau.mashups
 
         var list = createWorkingOnList();
 
-        appBus.done(list);
+        if (appBus.done) {
+            appBus.done(list)
+        } else {
+            list(appBus);
+        }
     });

@@ -106,7 +106,8 @@ tau.mashups
                                 role: String(item.EntityState.Role.Id),
                                 started: timeFmt(new Date()),
                                 recent: JSON.stringify(workingOn.recent)
-                            }
+                            },
+                            scope: 'Public'
                         })
                     }).done(function() {
                         list.getWorkingOn();
@@ -181,7 +182,8 @@ tau.mashups
                                     role: "",
                                     started: "",
                                     recent: JSON.stringify(workingOn.recent.slice(0, options.maxRecent))
-                                }
+                                },
+                                scope: 'Public'
                             })
                         }).done(function() {
                             list.getWorkingOn();

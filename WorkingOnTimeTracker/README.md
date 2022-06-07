@@ -22,9 +22,12 @@ The mashup supports a couple options that could be configured on a per user basi
 
 ```
 options = {
+    appendTime: false,
     maxRecent: 5,
     projectFilter: []
 }
 ```
 
-The ```maxRecent``` option controls how many items to remember for the ```Recently Worked On``` section. The ```projectFilter``` option allows you to specify project ids that should be excluded from the list of items to display.
+* ```appendTime``` - Whether to append to a single time record on the assignable, or create a new time record each time. Defaults to FALSE.
+* ```maxRecent``` - controls how many items to remember for the ```Recently Worked On``` section
+* ```projectFilter``` - allows you to specify project ids that should be excluded from the list of items to display

@@ -22,6 +22,7 @@ tau.mashups
             },
             workingOn = {},
             options = {
+                appendTime: false,
                 maxRecent: 5,
                 projectFilter: []
             },
@@ -149,7 +150,7 @@ tau.mashups
 
                         $.getJSON(urls['times'] + '&where=(user.id eq ' + user.id + ') and (assignable.id eq ' + workingOn.id + ') and (role.id eq ' + workingOn.role + ') and (date eq "' + ended.toISOString().substr(0, 10) + '")',
                             function(data) {
-                                if (data.Items.length > 0) {
+                                if (options.appendTime && data.Items.length > 0) {
                                     time.Id = data.Items[0].Id;
                                     if (data.Items[0].Description != null) {
                                         time.Description += "\n\n" + data.Items[0].Description;
@@ -199,6 +200,9 @@ tau.mashups
             };
 
             list.loadOptions = function(data) {
+                if (data.appendTime) {
+                    options.appendTime = data.appendTime;
+                }
                 if (data.maxRecent) {
                     options.maxRecent = data.maxRecent;
                 }
